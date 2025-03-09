@@ -235,7 +235,7 @@ sales_by_product AS (
 SELECT *, 
     ROW_NUMBER() OVER (PARTITION BY region ORDER BY sales DESC) AS ranking,
     ROUND(
-    (sales / (SELECT COUNT(DISTINCT id) FROM core.orders WHERE LOWER(product_name) = 'apple airpods headphones')) * 100, 2) AS sales_share
+        (sales / (SELECT COUNT(DISTINCT id) FROM core.orders WHERE LOWER(product_name) = 'apple airpods headphones')) * 100, 2) AS sales_share
 FROM sales_by_product
 QUALIFY ROW_NUMBER() OVER (PARTITION BY region ORDER BY sales DESC) = 1 -- BigQuery specific function
 ORDER BY sales DESC
