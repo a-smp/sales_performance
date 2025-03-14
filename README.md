@@ -1,4 +1,4 @@
-# Sales Performance Analysis | Elist
+# Retail Sales & Revenue Performance | Elist
 
 ## Objective
 Analyze revenue trends, order volumes, refund rates, and customer behavior to identify opportunities for increasing sales, improving retention, and optimizing business strategy.
